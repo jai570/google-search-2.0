@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./input.css";
+import "./index.css";
 import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
-import ResultContextProvider from "../src/context/ResultContextProvider";
+import { BrowserRouter } from "react-router-dom";
+import { ResultContextProvider } from "./context/ResultContextProvider";
 
 ReactDOM.render(
-  <Router>
-    <ResultContextProvider>
+  <ResultContextProvider>
+    <BrowserRouter>
       <App />
-    </ResultContextProvider>
-  </Router>,
+    </BrowserRouter>
+  </ResultContextProvider>,
   document.getElementById("root")
 );
